@@ -1,0 +1,51 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateInstanceProfile",
+                "iam:DeleteInstanceProfile",
+                "iam:GetRole",
+                "iam:GetInstanceProfile",
+                "iam:RemoveRoleFromInstanceProfile",
+                "iam:CreateRole",
+                "iam:DeleteRole",
+                "iam:AttachRolePolicy",
+                "iam:PutRolePolicy",
+                "iam:ListInstanceProfiles",
+                "iam:AddRoleToInstanceProfile",
+                "iam:ListInstanceProfilesForRole",
+                "iam:PassRole",
+                "iam:DetachRolePolicy",
+                "iam:DeleteRolePolicy",
+                "iam:GetOpenIDConnectProvider",
+                "iam:GetRolePolicy"
+            ],
+            "Resource": [
+                "arn:aws:iam::<AWSACCOUNTNUMBERHERE>:role/eksctl-*",
+                "arn:aws:iam::<AWSACCOUNTNUMBERHERE>:instance-profile/eksctl-*",
+                "arn:aws:iam::<AWSACCOUNTNUMBERHERE>:oidc-provider/*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "autoscaling:CreateLaunchConfiguration",
+                "autoscaling:DescribeScalingActivities",
+                "autoscaling:DeleteLaunchConfiguration",
+                "autoscaling:DescribeAutoScalingGroups",
+                "autoscaling:DescribeLaunchConfigurations",
+                "cloudformation:*",
+                "autoscaling:UpdateAutoScalingGroup",
+                "autoscaling:DeleteAutoScalingGroup",
+                "eks:*",
+                "ec2:*",
+                "autoscaling:CreateAutoScalingGroup"
+            ],
+            "Resource": "*"
+        }
+    ]
+}

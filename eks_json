@@ -24,9 +24,9 @@
                 "iam:GetRolePolicy"
             ],
             "Resource": [
-                "arn:aws:iam::<AWSACCOUNTNUMBERHERE>:role/eksctl-*",
-                "arn:aws:iam::<AWSACCOUNTNUMBERHERE>:instance-profile/eksctl-*",
-                "arn:aws:iam::<AWSACCOUNTNUMBERHERE>:oidc-provider/*"
+                "arn:aws:iam::<AWS_Acct_Id>:role/eksctl-*",
+                "arn:aws:iam::<AWS_Acct_Id>:instance-profile/eksctl-*",
+                "arn:aws:iam::<AWS_Acct_Id>:oidc-provider/*"
             ]
         },
         {
